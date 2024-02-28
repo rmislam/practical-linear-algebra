@@ -15,6 +15,11 @@ physicsClient = p.connect(p.GUI)
 p.setGravity(0, 0, 0)
 p.setRealTimeSimulation(1)
 
+# NOTE: Clone the PyBullet (bullet3) repository to obtain the urdf files:
+# https://github.com/bulletphysics/bullet3
+# Specifically you'll find the urdf files in the repository's /data folder:
+# https://github.com/bulletphysics/bullet3/tree/master/data
+
 robot = p.loadURDF("../bullet3/data/TwoJointRobot_wo_fixedJoints.urdf")  # change path according to your system
 #robot = p.loadURDF("../bullet3/data/kuka_lwr/kuka.urdf")  # change path according to your system
 #robot = p.loadURDF("../bullet3/data/humanoid/nao.urdf")  # change path according to your system
